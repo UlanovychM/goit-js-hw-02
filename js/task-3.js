@@ -16,10 +16,10 @@
 // console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
 
 function checkForSpam(message) {
-	return message.toLowerCase().indexOf('sale') >= 1 ||
+	return (
+		message.toLowerCase().indexOf('sale') >= 1 ||
 		message.toLowerCase().indexOf('spam') >= 1
-		? true
-		: false;
+	);
 }
 
 console.log(checkForSpam('Latest technology news')); // false
